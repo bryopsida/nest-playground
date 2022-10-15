@@ -37,23 +37,18 @@ spec:
             - name: ELASTIC_APM_SERVICE_NAME
               value: nest-playground
             - name: ELASTIC_APM_SERVER_URL
-              value: elastic-apm-server.elastic.svc.cluster.local
-            - name: ELASTIC_APM_SECRET_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: elastic
-                  key: apm-token
+              value:  http://apm-server-apm-server.elastic.svc.cluster.local:8200/
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 3000
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /health
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /health
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
