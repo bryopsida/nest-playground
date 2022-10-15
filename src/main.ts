@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import ElasticAPM from 'elastic-apm-node';
+import * as elastic from 'elastic-apm-node';
 
-const apm = ElasticAPM.start();
+const apm = elastic.start();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
