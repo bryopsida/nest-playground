@@ -1,0 +1,33 @@
+name: CI
+on:
+  schedule:
+    - cron: '40 13 * * *'
+  push:
+    branches: [ "main" ]
+    # Publish semver tags as releases.
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  # Use docker.io for Docker Hub if empty
+  REGISTRY: ghcr.io
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ github.repository }}
+
+
+jobs:
+  validate-node:
+    name: "Validate"
+    uses: curium-rocks/flows/.github/workflows/node-ts.yml@main
+    secrets:
+      SONARQUBE_KEY: ${{ secrets.SONARQUBE_KEY }}
+  build-image:
+    needs:
+      - validate-node
+    name: "Build container image"
+    uses: curium-rocks/flows/.github/workflows/oci-build-image.yml@main
+    with:
+      image_name: nest-playground
+      push_in_pr: true
+  
