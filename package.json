@@ -27,7 +27,7 @@
     "@nestjs/core": "9.2.1",
     "@nestjs/platform-express": "9.2.1",
     "@nestjs/terminus": "9.1.4",
-    "elastic-apm-node": "3.41.1",
+    "elastic-apm-node": "3.42.0",
     "nats": "2.10.3",
     "reflect-metadata": "0.1.13",
     "rimraf": "4.1.1",
