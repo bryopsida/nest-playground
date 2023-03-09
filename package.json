@@ -30,7 +30,7 @@
     "elastic-apm-node": "3.43.0",
     "nats": "2.13.0",
     "reflect-metadata": "0.1.13",
-    "rimraf": "4.3.1",
+    "rimraf": "4.4.0",
     "rxjs": "7.8.0"
   },
   "devDependencies": {
