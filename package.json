@@ -26,7 +26,7 @@
     "@nestjs/common": "9.3.12",
     "@nestjs/core": "9.3.12",
     "@nestjs/platform-express": "9.3.12",
-    "@nestjs/terminus": "9.2.1",
+    "@nestjs/terminus": "9.2.2",
     "elastic-apm-node": "3.43.0",
     "nats": "2.13.1",
     "reflect-metadata": "0.1.13",
