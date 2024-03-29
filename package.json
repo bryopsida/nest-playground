@@ -29,7 +29,7 @@
     "@nestjs/terminus": "10.2.3",
     "elastic-apm-node": "4.5.0",
     "nats": "2.21.0",
-    "reflect-metadata": "0.2.1",
+    "reflect-metadata": "0.2.2",
     "rimraf": "5.0.5",
     "rxjs": "7.8.1"
   },
