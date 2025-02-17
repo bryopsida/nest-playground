@@ -23,9 +23,9 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "11.0.9",
-    "@nestjs/core": "11.0.9",
-    "@nestjs/platform-express": "11.0.9",
+    "@nestjs/common": "11.0.10",
+    "@nestjs/core": "11.0.10",
+    "@nestjs/platform-express": "11.0.10",
     "@nestjs/terminus": "11.0.0",
     "elastic-apm-node": "4.11.0",
     "nats": "2.29.2",
@@ -34,9 +34,9 @@
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@nestjs/cli": "11.0.2",
-    "@nestjs/schematics": "11.0.0",
-    "@nestjs/testing": "11.0.9",
+    "@nestjs/cli": "11.0.3",
+    "@nestjs/schematics": "11.0.1",
+    "@nestjs/testing": "11.0.10",
     "@types/express": "5.0.0",
     "@types/jest": "29.5.14",
     "@types/node": "22.13.4",
